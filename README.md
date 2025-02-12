@@ -1,12 +1,15 @@
 # Depth Over Coding Sequence
 
-Scripts to generate a plot of read depth at each nucleotide over the coding sequence of a gene.
+Workflow to generate a plot of read depth at each nucleotide over the coding sequence of a gene.
 
 1. Create conda environment
+```
+conda env create -n coverage -f coverage.yml
+```
 
 2. Filter annotation file to coding sequence of genes of interest: filtergff.sh
 
-3. Create bases.bed file, which has coordinates of every nucleotide in the genome
+3. Create bases.bed file, which has coordinates of every nucleotide in the genome: basepositions.sh
 
 4. Intersect bam files of rnaseq data of interest with filtered gff files: intersect1.sh
 
